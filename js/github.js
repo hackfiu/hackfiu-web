@@ -1,4 +1,3 @@
-//fetches github info
 const githubUrl = "https://api.github.com/orgs";
 const getHeaders = { "Content-Type": "application/json" };
 const getOptions = { method: "GET", headers: getHeaders };
@@ -22,16 +21,20 @@ const getGitHubRepos = async organization => {
   const repos_url = await getGitHubReposUrl(organization);
   const payload = await fetch(repos_url, getOptions);
   const repos = await payload.json();
+  const reposCount = repos.length;
 
-  return repos;
+  $("#reposCount").prepend(reposCount);
+  return { repos, reposCount };
 };
 
 const getGitHubMembers = async () => {
   const memberUrl = `${githubUrl}/${githubOrganization}/members`;
   const payload = await fetch(memberUrl, getOptions);
   const members = await payload.json();
+  const memberCount = members.length;
 
-  return members;
+  $("#memberCount").prepend(memberCount);
+  return { members, memberCount };
 };
 
 /**
@@ -41,6 +44,6 @@ const getGitHubMembers = async () => {
  *
  * Cleanest client side JS in South Florida
  */
-// getGitHubReposUrl(githubOrganization).then(res => console.log(res));
-// getGitHubRepos(githubOrganization).then(res => console.log(res));
-// getGitHubMembers().then(res => console.log(res));
+getGitHubReposUrl(githubOrganization).then(res => console.log(res));
+getGitHubRepos(githubOrganization).then(res => console.log(res));
+getGitHubMembers().then(res => console.log(res));
