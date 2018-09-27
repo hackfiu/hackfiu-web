@@ -34,6 +34,13 @@ const getGitHubMembers = async () => {
   return members;
 };
 
+/**
+ * Documentation on how to use each method.
+ *
+ * Note that each method returns a promise
+ *
+ * Cleanest client side JS in South Florida
+ */
 // getGitHubReposUrl(githubOrganization).then(res => console.log(res));
 // getGitHubRepos(githubOrganization).then(res => console.log(res));
 // getGitHubMembers().then(res => console.log(res));
