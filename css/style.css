@@ -1,20 +1,154 @@
-body {
+@font-face {
+  font-family: Product-Sans-Bold;
+  src: url("../fonts/product-sans/Product-Sans-Bold.ttf");
+}
+@font-face {
+  font-family: Product-Sans-Bold-Italic;
+  src: url("../fonts/product-sans/Product-Sans-Bold-Italic.ttf");
+}
+@font-face {
+  font-family: Product-Sans-Italic;
+  src: url("../fonts/product-sans/Product-Sans-Italic.ttf");
+}
+@font-face {
+  font-family: Product-Sans-Regular;
+  src: url("../fonts/product-sans/Product-Sans-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: Product-Sans-Regular;
+  background-color: #091731;
 }
 
 section {
-  height: 100%;
+  /* height: 100% !important; */
   background-color: #091731;
-  padding: 100px;
+  padding: 0rem 10rem;
+  /* min-height: 960px; */
+}
+
+.full {
+  min-height: 960px;
+  height: 100% !important;
+}
+
+.fit {
+  padding: 5rem 10rem;
+}
+
+*:focus {
+  outline: 0;
+  border: none;
 }
 
 /* -------------------------------------- */
 
-.header {
-  text-align: right;
+.yellow {
+  background-color: #f8c93e;
+  color: #091731;
+}
+
+.blue {
+  background-color: #091731;
+  color: #f9d157;
+}
+
+.white {
+  background-color: #fff;
+  color: #091731;
+}
+
+.line {
+  height: 1.5rem;
+  background: #fff;
+  display: block;
 }
 
 .wave {
-  background: url("../img/wave.svg");
+  width: 100vw;
+}
+
+.flip {
+  transform: scale(1, -1);
+}
+
+.top {
+  margin-bottom: -2.5rem;
+}
+.bottom {
+  margin-top: -0.5rem;
+  position: absolute;
+}
+/* -------------------------------------- */
+
+.header img {
+  max-height: 400px;
+}
+
+.header .wrapper {
+  margin: 30rem 12rem 0 0;
+  position: absolute;
+  right: 0;
+}
+
+/* -------------------------------------- */
+
+/* -------------------------------------- */
+.breakdown {
+  z-index: 1;
+}
+
+.breakdown h1 {
+  text-align: right;
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.breakdown .line {
+  margin-top: 10px !important;
+  width: 10rem;
+  margin: 0 0 0 auto;
+}
+
+.breakdown .stats {
+  margin: 3rem 0 0 5rem;
+}
+
+.breakdown .stats:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+.breakdown .stats .projects .line {
+  margin-top: -10px !important;
+  width: 35vw;
+  margin: 0 auto 0 0;
+  height: 0.5rem;
+}
+
+.breakdown .stats .members .line {
+  margin-top: -10px !important;
+  width: 42vw;
+  margin: 0 auto 0 0;
+  height: 0.5rem;
+}
+
+.breakdown .number {
+  color: #fff;
+  font-size: 12vw;
+  font-weight: bold;
+}
+
+.breakdown .number span {
+  color: #000;
+  font-size: 5vw;
+  font-weight: bold;
 }
