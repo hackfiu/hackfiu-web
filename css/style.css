@@ -26,16 +26,37 @@ html {
   padding: 0;
   height: 100%;
   font-family: Product-Sans-Regular;
-  background-color: #091731;
+  background-color: #1d1d1d;
 }
 
 section {
-  /* height: 100% !important; */
-  background-color: #091731;
-  padding: 0rem 10rem;
-  /* min-height: 960px; */
+  /* background-color: #091731; */
+  height: 100%;
 }
 
+.hero {
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  padding-top: 300px;
+}
+.hero img {
+  /* max-width: 30%; */
+  width: 350px;
+  height: auto;
+  margin-bottom: 10px;
+
+  /* width: auto\9;  */
+  /* bottom: 0;
+  position: absolute;
+  right: 100px; */
+}
+
+.hero p {
+  font-weight: lighter;
+  color: white;
+  font-size: 30px;
+}
 .full {
   min-height: 960px;
   height: 100% !important;
